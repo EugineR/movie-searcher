@@ -1,0 +1,14 @@
+.movie-tile {
+    height: 300px;
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+.poster-image {
+    width: 100%;
+    margin-bottom: 10px;
+}
