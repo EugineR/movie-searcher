@@ -1,5 +1,6 @@
-import './MovieTile.styles.css'
+import { Link } from "react-router-dom";
 
+import './MovieTile.styles.css'
 import defaultPoster from '../../assets/default-poster.png'
 
 export default function ({ data }) {
@@ -7,12 +8,14 @@ export default function ({ data }) {
         || defaultPoster
 
     return (
-        <div className="movie-tile">
-            <img src={ posterSrc } alt="movie poster" className="poster-image"/>
+        <Link to="/movie">
+            <div className="movie-tile">
+                <img src={ posterSrc } alt="movie poster" className="poster-image"/>
 
-            <div>
-                <span>{ data?.title_long }</span>
+                <div>
+                    <span>{ data?.title_long }</span>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }
